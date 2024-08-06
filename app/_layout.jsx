@@ -1,5 +1,6 @@
 import { Slot, SplashScreen, Stack } from "expo-router";
 import { Text } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import { useEffect } from "react";
 
@@ -29,8 +30,14 @@ export default function RootLayout() {
     return null;
   }
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-    </Stack>
+    <>
+      <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        {/**<Stack.Screen name="/search" options={{ headerShown: false }} />**/}
+      </Stack>
+      <StatusBar backgroundColor="#161622" style="light" />
+    </>
   );
 }
