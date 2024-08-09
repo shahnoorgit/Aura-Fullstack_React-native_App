@@ -2,6 +2,7 @@ import { Slot, SplashScreen, Stack } from "expo-router";
 import { Text } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
+import GlobalProvider from "../context/Gloabalprovider";
 import { useEffect } from "react";
 
 SplashScreen.preventAutoHideAsync();
@@ -30,14 +31,13 @@ export default function RootLayout() {
     return null;
   }
   return (
-    <>
+    <GlobalProvider>
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         {/**<Stack.Screen name="/search" options={{ headerShown: false }} />**/}
       </Stack>
-      <StatusBar backgroundColor="#161622" style="light" />
-    </>
+    </GlobalProvider>
   );
 }

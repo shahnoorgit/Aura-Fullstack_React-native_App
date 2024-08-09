@@ -1,10 +1,11 @@
-import { View, Text, ScrollView, Image } from "react-native";
+import { View, Text, ScrollView, Image, Alert } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images } from "../../constants";
 import FormField from "../../components/FormField";
 import Custombtn from "../../components/Custombtn";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
+import { createUser } from "../../lib/appwrite";
 
 const SignUp = () => {
   const [isSubmiting, setSubmiting] = useState(false);
@@ -13,7 +14,27 @@ const SignUp = () => {
     email: "",
     password: "",
   });
-  const submit = () => {};
+  const submit = async () => {
+    if (!formdata.username || !formdata.password || !formdata.email) {
+      Alert.alert("Error", "All fields must be provided");
+      return;
+    }
+    setSubmiting(true);
+    try {
+      const res = await createUser(
+        formdata.email,
+        formdata.password,
+        formdata.username
+      );
+
+      //setState
+      router.replace("/home");
+    } catch (error) {
+      Alert.alert("Error", error.message);
+    } finally {
+      setSubmiting(false);
+    }
+  };
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView>

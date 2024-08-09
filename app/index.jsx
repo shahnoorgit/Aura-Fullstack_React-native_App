@@ -4,7 +4,10 @@ import { Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images } from "../constants";
 import CustomBtn from "../components/Custombtn";
+import { useGlobalContext } from "../context/Gloabalprovider";
 const index = () => {
+  const { isLoading, isLoggedIn } = useGlobalContext();
+  if (!isLoading && isLoggedIn) return <Redirect href={"/home"} />;
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView
