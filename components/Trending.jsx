@@ -45,7 +45,6 @@ const TrendingItem = ({ activeItem, data }) => {
           useNativeControls
           shouldPlay
           onPlaybackStatusUpdate={(status) => {
-            console.log(status);
             if (status.didJustFinish) {
               setplay(false);
             }

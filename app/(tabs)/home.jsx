@@ -15,8 +15,11 @@ import EmptyState from "../../components/EmptyState";
 import { getVideos, getLatestVideos } from "../../lib/appwrite";
 import useAppwrite from "../../lib/useAppwrite";
 import VideoCrad from "../../components/VideoCrad";
+import { useGlobalContext } from "../../context/Gloabalprovider";
+
 const Home = () => {
   const [refreshing, setRefreshing] = useState(false);
+  const { user } = useGlobalContext();
   const { data: posts, refetch } = useAppwrite(getVideos);
   const { data: latestPosts } = useAppwrite(getLatestVideos);
   const onrefresh = async () => {
@@ -49,7 +52,7 @@ const Home = () => {
                   Welcome Back
                 </Text>
                 <Text className="text-2xl font-psemibold text-white">
-                  Shahnoor
+                  {user?.username}
                 </Text>
               </View>
 
