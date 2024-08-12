@@ -1,50 +1,40 @@
-# Welcome to your Expo app 👋
+# Aura
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Aura** is a cutting-edge full-stack mobile application built with React Native and Expo. Designed to offer an engaging and user-friendly experience, Aura combines modern technology with elegant design to deliver a powerful and versatile app for managing media and user interactions.
 
-## Get started
+## 📚 Tech Stack
 
-1. Install dependencies
+- **React Native**: A framework for building native apps using React.
+- **Expo**: A framework and platform for universal React applications, simplifying development and deployment.
+- **Nativewind**: For utility-first styling, leveraging TailwindCSS with React Native.
+- **Animatable**: A library for adding animations to React Native applications.
+- **Appwrite**: A self-hosted backend server for managing authentication, database, and more.
 
+## 🔋 Features
+
+- **Onboarding Screen**: Engaging onboarding experience with graphics and instructions to welcome users.
+- **Robust Authentication & Authorization**: Secure email login system to protect user accounts and data.
+- **Dynamic Home Screen**: Features an animated flat list to showcase the latest videos, providing a smooth browsing experience.
+- **Pull-to-Refresh Functionality**: Easily refresh content with a simple pull gesture to ensure up-to-date information.
+- **Full-Text Search**: Powerful search capabilities with real-time suggestions and instant results for efficient content discovery.
+- **Tab Navigation**: Intuitive navigation between sections like Home, Search, and Profile with a user-friendly tab interface.
+- **Post Creation Screen**: Allows users to upload video and image posts directly from the app, with integrated media selection.
+- **Profile Screen**: View detailed insights into account activity, including uploaded videos, follower count, and personal settings.
+- **Responsiveness**: Ensures smooth performance and adaptability across various devices and screen sizes for a consistent user experience.
+- **Animations**: Enhanced user interaction with dynamic animations using the Animatable library.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (>= 14.x)
+- Expo CLI (`npm install -g expo-cli`)
+- Appwrite Server (for backend services)
+
+### Installation
+
+1. **Clone the Repository**
    ```bash
-   npm install
+   git clone https://github.com/your-username/aura.git
+   cd aura
    ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
